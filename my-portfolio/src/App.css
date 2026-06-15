@@ -1,0 +1,270 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: #222;
+  padding-top: 80px;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  align-items: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #4f46e5;
+}
+
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #4f46e5;
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.3);
+  animation: float 3s ease-in-out infinite;
+  justify-content: center;
+
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.hero h1 {
+  font-size: 40px;
+  color:#4f46e5;
+}
+
+.hero h1 span {
+  color: #4f46e5;
+}
+
+.hero h2 {
+  color: #555;
+  margin: 10px 0;
+}
+
+.hero p {
+  max-width: 500px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.btn {
+  background: #4f46e5;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 0 rgba(79, 70, 229, 0.5);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.6);
+}
+
+section {
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* TITLES */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #4f46e5;
+}
+
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skills span {
+  background: white;
+  border: 2px solid #4f46e5;
+  padding: 10px 18px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #4f46e5;
+  color: white;
+  transform: scale(1.1);
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 15px 0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+.container img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+  border: 3px solid #4f46e5;
+}
+
+ul {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  margin: 8px 0;
+}
+
+#contact a {
+  color: #4f46e5;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  background: #111827;
+  color: white;
+  padding: 20px;
+}
+ 
+.certificate-list {
+  list-style: none;
+  text-align: center;
+}
+
+.certificate-name {
+  margin: 12px 0;
+  cursor: pointer;
+  color:#333;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.certificate-name:hover {
+  color: #312e81;
+}
+
+.certificate-viewer {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.certificate-image {
+  width: 300px;
+  max-width: 90%;
+  border: 2px solid #4f46e5;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+  display: block;
+  margin: 15px auto;
+  padding: 10px 20px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+ @media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a {
+    margin-left: 0;
+  }
+}
+  .hero h1 {
+    font-size: 28px;
+  }
+}
