@@ -1,16 +1,14 @@
+import { useState } from "react";
 import profile from "./assets/HarshaPic.jpeg";
 import logo from "./assets/logo.png";
 import resume from "./assets/Resume.pdf";
 
-import JavaCert from "./assets/JavaCert.png";
-import PythonCert from "./assets/PythonCert.png";
-import DSCert from "./assets/DSCert.png";
-import SoftSkillsCert from "./assets/SoftSkillsCert.png";
-
+import Certificates from "./Certificates";
 import "./App.css";
-import { useState } from "react";
 
 function App() {
+  const [showCertificates, setShowCertificates] = useState(false);
+
   const skills = [
     "Java",
     "Python",
@@ -32,30 +30,16 @@ function App() {
     },
   ];
 
-  const certificates = [
-    {
-      name: "Java - Infosys Springboard",
-      image: JavaCert,
-    },
-    {
-      name: "Python - Infosys Springboard",
-      image: PythonCert,
-    },
-    {
-      name: "Data Structures - CodeChef",
-      image: DSCert,
-    },
-    {
-      name: "Soft Skills Development - NPTEL",
-      image: SoftSkillsCert,
-    },
-  ];
-
-  const [selectedCert, setSelectedCert] = useState(null);
+  if (showCertificates) {
+    return (
+      <Certificates
+        goBack={() => setShowCertificates(false)}
+      />
+    );
+  }
 
   return (
     <>
- 
       <header>
         <div className="logo">Harsha</div>
 
@@ -63,12 +47,13 @@ function App() {
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
-          <a href="#certificates">Certificates</a>
           <a href="#resume">Resume</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
+
       <section className="hero">
         <img src={profile} alt="Harsha Profile" />
 
@@ -79,25 +64,27 @@ function App() {
         <h2>Computer Science Student</h2>
 
         <p>
-          Passionate about Web Development, Java, Data Structures and building
-          modern user interfaces using React.
+          Passionate about Web Development, Java, Data Structures
+          and building modern user interfaces using React.
         </p>
 
         <a href="#contact" className="btn">
           Contact Me
         </a>
       </section>
+
       <section id="about">
         <div className="container">
           <h2>About Me</h2>
 
           <p>
-            I am a Computer Science student currently learning Full Stack
-            Development and improving my problem-solving skills through Data
-            Structures and Algorithms.
+            I am a Computer Science student currently learning Full
+            Stack Development and improving my problem-solving
+            skills through Data Structures and Algorithms.
           </p>
         </div>
       </section>
+
       <section id="skills">
         <div className="container">
           <h2>Skills</h2>
@@ -109,6 +96,7 @@ function App() {
           </div>
         </div>
       </section>
+
       <section id="education">
         <div className="container">
           <h2>Education</h2>
@@ -122,6 +110,23 @@ function App() {
           <img src={logo} alt="ABESIT Logo" />
         </div>
       </section>
+<section id="experience">
+  <div className="container">
+    <h2>Experience</h2>
+
+    <div className="card">
+      <h3>Technical Intern</h3>
+      <p>Andromeida Maritime Solutions Pvt. Ltd.</p>
+      <p>June 2026 - Present</p>
+
+      <p>
+        Learning web development, software engineering
+        practices, teamwork, and real-world project
+        development.
+      </p>
+    </div>
+  </div>
+</section>
       <section id="projects">
         <div className="container">
           <h2>Projects</h2>
@@ -136,42 +141,21 @@ function App() {
           </div>
         </div>
       </section>
-      <section id="certificates">
-        <div className="container">
-          <h2>Certificates</h2>
 
-          <ul className="certificate-list">
-            {certificates.map((cert) => (
-              <li
-                key={cert.name}
-                className="certificate-name"
-                onClick={() => setSelectedCert(cert)}
-              >
-                {cert.name}
-              </li>
-            ))}
-          </ul>
+      <section className="cert-section">
+  <button
+    className="btn"
+    onClick={() => setShowCertificates(true)}
+  >
+    View Certificates
+  </button>
+</section>
+      
 
-          {selectedCert && (
-            <div className="certificate-viewer">
-              <img
-                src={selectedCert.image}
-                alt={selectedCert.name}
-                className="certificate-image"
-              />
-
-              <button
-                className="close-btn"
-                onClick={() => setSelectedCert(null)}
-              >
-                Close
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
       <section id="resume">
         <div className="container">
+          <h2>Resume</h2>
+
           <a
             href={resume}
             target="_blank"
@@ -182,16 +166,19 @@ function App() {
           </a>
         </div>
       </section>
+
       <section id="contact">
         <div className="container">
           <h2>Contact Me</h2>
+
           <p>
-            <strong>Email:</strong> harshayadav252@gmail.com
+            <strong>Email:</strong>{" "}
+            harshayadav252@gmail.com
           </p>
 
           <p className="social-links">
             <a
-              href="https://github.com/"
+              href="https://github.com/harshayadav252"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -201,7 +188,7 @@ function App() {
             {" | "}
 
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/harsha-y-26254a32a"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -210,10 +197,14 @@ function App() {
           </p>
         </div>
       </section>
+
       <footer>
-        <p>© {new Date().getFullYear()} Harsha</p>
+        <p>
+          © {new Date().getFullYear()} Harsha
+        </p>
       </footer>
     </>
   );
 }
+
 export default App;
