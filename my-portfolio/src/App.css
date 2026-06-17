@@ -338,8 +338,63 @@ section {
 #resume {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 } 
+
 #experience {
-  background: #f3e8ff; 
+  padding: 80px 10%;
+  background: #cad3e9;
+}
+
+#experience h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #0f172a;
+}
+
+.experience-card {
+  background: white;
+  border-left: 5px solid #2563eb;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.2);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.experience-header h3 {
+  margin: 0;
+  color: #2563eb;
+  font-size: 1.4rem;
+}
+
+.experience-header span {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.experience-card h4 {
+  margin-top: 12px;
+  color: #334155;
+  font-size: 1.1rem;
+}
+
+.experience-card p {
+  margin-top: 15px;
+  color: #475569;
+  line-height: 1.7;
 }
 
 @media (max-width: 768px) {

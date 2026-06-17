@@ -110,23 +110,26 @@ function App() {
           <img src={logo} alt="ABESIT Logo" />
         </div>
       </section>
-<section id="experience">
+      <section id="experience">
   <div className="container">
     <h2>Experience</h2>
 
-    <div className="card">
-      <h3>Technical Intern</h3>
-      <p>Andromeida Maritime Solutions Pvt. Ltd.</p>
-      <p>June 2026 - Present</p>
+    <div className="experience-card">
+      <div className="experience-header">
+        <h3>Technical Intern</h3>
+        <span>June 2026 - Present</span>
+      </div>
+
+      <h4>Andromeida Maritime Solutions Pvt. Ltd.</h4>
 
       <p>
-        Learning web development, software engineering
-        practices, teamwork, and real-world project
-        development.
+        Learning web development, software engineering practices,
+        teamwork, and real-world project development.
       </p>
     </div>
   </div>
 </section>
+
       <section id="projects">
         <div className="container">
           <h2>Projects</h2>
