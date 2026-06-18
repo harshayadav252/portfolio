@@ -2,7 +2,7 @@ import { useState } from "react";
 import profile from "./assets/HarshaPic.jpeg";
 import logo from "./assets/logo.png";
 import resume from "./assets/Resume.pdf";
-import Certificates from "./Certificates";
+import Certificates from "./certificates.jsx";
 import "./App.css";
 function App() {
   const [showCertificates, setShowCertificates] = useState(false);
