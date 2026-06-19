@@ -45,7 +45,7 @@ function Certificates({ goBack }) {
                 target="_blank"
                 rel="noreferrer"
                 className="btn"  >
-                View Certificate
+                 View Certificate
               </a>
             </div>
           </div>
