@@ -59,7 +59,7 @@ function Certificates({ goBack }) {
           display: "block",
           marginInline: "auto",
         }}>
-        ← Back to Portfolio
+         Back
       </button>
     </section>
   );

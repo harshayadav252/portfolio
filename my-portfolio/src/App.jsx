@@ -50,8 +50,7 @@ function App() {
       <section className="hero">
         <img src={profile} alt="Harsha Profile" />
         <h1>
-          Hi, I'm <span>Harsha</span>
-        </h1>
+          Hi, I'm Harsha </h1>
         <h2>Computer Science Student</h2>
         <p>
           Passionate about Web Development, Java, Data Structures
@@ -93,21 +92,22 @@ function App() {
         </div>
       </section>
       <section id="experience">
-  <div className="container">
-    <h2>Experience</h2>
-    <div className="experience-card">
-      <div className="experience-header">
-        <h3>Technical Intern</h3>
-        <span>June 2026 - Present</span>
-      </div>
-      <h4>Andromeida Maritime Solutions Pvt. Ltd.</h4>
-      <p>
-        Learning web development, software engineering practices,
-        teamwork, and real-world project development.
-      </p>
-    </div>
-  </div>
-</section>
+        <div className="container">
+          <h2>Experience</h2>
+          <div className="experience-card">
+            <div className="experience-header">
+              <h3>Technical Intern</h3>
+              <span>June 2026 - Present</span>
+            </div>
+            <h4>Andromeida Maritime Solutions Pvt. Ltd.</h4>
+            <p>
+              Learning web development, software engineering
+              practices, teamwork, and real-world project
+              development.
+            </p>
+          </div>
+        </div>
+      </section>
       <section id="projects">
         <div className="container">
           <h2>Projects</h2>
@@ -121,44 +121,47 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="cert-section">
-  <button
-    className="btn"
-    onClick={() => setShowCertificates(true)}>
-    View Certificates
-  </button>
-</section>
       <section id="resume">
         <div className="container">
           <h2>Resume</h2>
-          <a
-            href={resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn">
-            View Resume
-          </a>
+          <div className="action-buttons">
+            <a
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn" >
+              View Resume
+            </a>
+            <button
+              className="btn"
+              onClick={() => setShowCertificates(true)}>
+              View Certificates
+            </button>
+          </div>
         </div>
       </section>
       <section id="contact">
         <div className="container">
           <h2>Contact Me</h2>
           <p>
-            <strong>Email:</strong>{" "}
+            <strong>Email:</strong>
+            {" "}
             harshayadav252@gmail.com
           </p>
           <p className="social-links">
             <a
               href="https://github.com/harshayadav252"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               GitHub
             </a>
             {" | "}
             <a
               href="https://www.linkedin.com/in/harsha-y-26254a32a"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               LinkedIn
             </a>
           </p>
@@ -166,10 +169,10 @@ function App() {
       </section>
       <footer>
         <p>
-          © {new Date().getFullYear()} Harsha
+          © {new Date().getFullYear()} Harsha Yadav
         </p>
       </footer>
-    </>
+  </>
   );
 }
 export default App;
